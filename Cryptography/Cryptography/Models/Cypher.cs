@@ -39,18 +39,41 @@ namespace Cryptography.Models
         }
         public string Decrypt(string encryptedText)
         {
-            throw new NotImplementedException();
+            StringBuilder plaintext = new StringBuilder();
+
+            foreach(char c in encryptedText)
+            {
+                if (char.IsUpper(c))
+                {
+                    plaintext.Append(c == ' ' ? c : char.ToUpper((char)(char.ToLower(c) - Key)));
+                }
+                else
+                {
+                    plaintext.Append(c == ' ' ? c : c - Key);
+                }
+            }
+
+            return plaintext.ToString();
+
+
         }
 
         public string Encrypt(string plaintext)
         {
-            plaintext = plaintext.ToLower();
             StringBuilder encryptedText = new StringBuilder();
 
             foreach (char c in plaintext)
             {
-                encryptedText.Append( c == ' ' ? c : c+Key);
-
+                if (char.IsUpper(c))
+                {
+                    encryptedText.Append(c == ' ' ? c : char.ToUpper((char)(char.ToLower(c) + Key)));
+                }
+                else
+                {
+                    encryptedText.Append( c == ' ' ? c : c+Key);
+                }
+                
+                    
             }
             return encryptedText.ToString();
         }
