@@ -21,6 +21,7 @@ namespace Cryptography.Models
         {
             Key = key;
         }
+
         public int Key 
         {
             get
@@ -43,7 +44,15 @@ namespace Cryptography.Models
 
         public string Encrypt(string plaintext)
         {
-            throw new NotImplementedException();
+            plaintext = plaintext.ToLower();
+            StringBuilder encryptedText = new StringBuilder();
+
+            foreach (char c in plaintext)
+            {
+                encryptedText.Append( c == ' ' ? c : c+Key);
+
+            }
+            return encryptedText.ToString();
         }
 
         public void GenerateKey()
