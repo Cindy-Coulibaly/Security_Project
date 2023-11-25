@@ -15,11 +15,7 @@ namespace Cryptography.Models
 
         public Cypher()
         {
-            
-        }
-        public Cypher(int key)
-        {
-            Key = key;
+            GenerateKey();
         }
 
         public int Key 
@@ -80,8 +76,8 @@ namespace Cryptography.Models
 
         public void GenerateKey()
         {
-            // let the user input a key, it's definitly not random
-            throw new NotImplementedException();
+            Random random = new Random();
+            Key = random.Next(MINKEY,MAXKEY);
         }
     }
 }
