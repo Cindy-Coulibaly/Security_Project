@@ -11,14 +11,14 @@ namespace Cryptography.Models
     {
         private int _key;
         private const int MINKEY = 0;
-        private const int MAXKEY = 25;
+        private const int MAXKEY = 26;
 
         public Cypher()
         {
             GenerateKey();
         }
 
-        public int Key 
+        private int Key 
         {
             get
             {
@@ -36,20 +36,27 @@ namespace Cryptography.Models
         public string Decrypt(string encryptedText)
         {
             StringBuilder plaintext = new StringBuilder();
+            int math;
 
             foreach(char c in encryptedText)
             {
-                if (Char.IsDigit(c))
+                if (Char.IsDigit(c) || !Char.IsLetter(c))
                 {
                     plaintext.Append(c);
-                } 
+                }
                 else if (char.IsUpper(c))
                 {
-                    plaintext.Append(c == ' ' ? c : (char)((((c - Key) - 'A') % 26) + 'A'));
+                    math = ((c - Key)-'A');
+                    math = math<MINKEY? MAXKEY + math : math% MAXKEY;
+                    math = math + 'A';
+                    plaintext.Append(c == ' ' ? c : ((char)(math)));
                 }
                 else
                 {
-                    plaintext.Append(c == ' ' ? c : (char)((((c - Key) - 'a') % 26) + 'a'));
+                    math = ((c - Key) - 'a');
+                    math = math < MINKEY ? MAXKEY + math : math % MAXKEY;
+                    math = math + 'a';
+                    plaintext.Append(c == ' ' ? c : ((char)(math)));
                 }
             }
 
@@ -61,20 +68,24 @@ namespace Cryptography.Models
         public string Encrypt(string plaintext)
         {
             StringBuilder encryptedText = new StringBuilder();
-
+            int math;
             foreach (char c in plaintext)
             {
-                if (Char.IsDigit(c))
+                if (Char.IsDigit(c) || !Char.IsLetter(c))
                 {
                     encryptedText.Append(c);
                 }
                 else if (char.IsUpper(c))
                 {
-                    encryptedText.Append(c == ' ' ? c : (char)((((c + Key) - 'A') % 26) + 'A'));
+                    math = (c+Key)-'A';
+                    math = (math % MAXKEY) + 'A';
+                    encryptedText.Append(c == ' ' ? c : ((char)(math)));
                 }
                 else
                 {
-                    encryptedText.Append( c == ' ' ?  c : (char)((((c + Key) - 'a') % 26) + 'a'));
+                    math = (c + Key) - 'a';
+                    math = (math % MAXKEY) + 'a';
+                    encryptedText.Append( c == ' ' ?  c : ((char)(math)));
                 }
                 
                     
@@ -86,7 +97,6 @@ namespace Cryptography.Models
         {
             Random random = new Random();
             Key = random.Next(MINKEY,MAXKEY);
-            Console.WriteLine(Key);
         }
     }
 }
