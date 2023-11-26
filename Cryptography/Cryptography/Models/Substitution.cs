@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cryptography
+namespace Cryptography.Models
 {
     internal class Substitution : ICryptography
     {
@@ -24,7 +24,7 @@ namespace Cryptography
 
             foreach (char c in chars)
             {
-                foreach(char k in key.Keys)
+                foreach (char k in key.Keys)
                 {
                     if (key[k] == c)
                     {
@@ -54,10 +54,10 @@ namespace Cryptography
         {
             Random rand = new Random();
 
-            List<char> characters = new List<char>() {'a','b','c','d','e','f','g','h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '};
+            List<char> characters = new List<char>() { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ' };
             List<char> randomized = characters.OrderBy(_ => rand.Next()).ToList();
 
-            for(int i = 0; i < randomized.Count; i++)
+            for (int i = 0; i < randomized.Count; i++)
             {
                 key[characters[i]] = randomized[i];
             }
