@@ -1,4 +1,6 @@
-﻿namespace Cryptography
+﻿using Cryptography.Models;
+
+namespace Cryptography
 {
     internal class Program
     {
