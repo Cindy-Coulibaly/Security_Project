@@ -10,8 +10,8 @@ namespace Cryptography.Models
     internal class Cypher : ICryptography
     {
         private int _key;
-        private const int MINKEY = -26;
-        private const int MAXKEY = -26;
+        private const int MINKEY = 0;
+        private const int MAXKEY = 25;
 
         public Cypher()
         {
@@ -39,13 +39,17 @@ namespace Cryptography.Models
 
             foreach(char c in encryptedText)
             {
-                if (char.IsUpper(c))
+                if (Char.IsDigit(c))
                 {
-                    plaintext.Append(c == ' ' ? c : char.ToUpper((char)(char.ToLower(c) - Key)));
+                    plaintext.Append(c);
+                } 
+                else if (char.IsUpper(c))
+                {
+                    plaintext.Append(c == ' ' ? c : (char)((((c - Key) - 'A') % 26) + 'A'));
                 }
                 else
                 {
-                    plaintext.Append(c == ' ' ? c : c - Key);
+                    plaintext.Append(c == ' ' ? c : (char)((((c - Key) - 'a') % 26) + 'a'));
                 }
             }
 
@@ -60,13 +64,17 @@ namespace Cryptography.Models
 
             foreach (char c in plaintext)
             {
-                if (char.IsUpper(c))
+                if (Char.IsDigit(c))
                 {
-                    encryptedText.Append(c == ' ' ? c : char.ToUpper((char)(char.ToLower(c) + Key)));
+                    encryptedText.Append(c);
+                }
+                else if (char.IsUpper(c))
+                {
+                    encryptedText.Append(c == ' ' ? c : (char)((((c + Key) - 'A') % 26) + 'A'));
                 }
                 else
                 {
-                    encryptedText.Append( c == ' ' ? c : c+Key);
+                    encryptedText.Append( c == ' ' ?  c : (char)((((c + Key) - 'a') % 26) + 'a'));
                 }
                 
                     
@@ -78,6 +86,7 @@ namespace Cryptography.Models
         {
             Random random = new Random();
             Key = random.Next(MINKEY,MAXKEY);
+            Console.WriteLine(Key);
         }
     }
 }
