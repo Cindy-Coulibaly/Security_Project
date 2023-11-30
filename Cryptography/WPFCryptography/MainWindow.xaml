@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!--#region Grid demarcartion-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--#endregion-->
+        
+        <!--#region Encryption part-->
+        
+        <Grid Grid.Column="0">
+            
+            
+        </Grid>
+        
+        <!--#endregion-->
+        
+        
+        <!--#region center of control-->
+
+        <Grid Grid.Column="1">
+
+
+        </Grid>
+
+        <!--#endregion-->
+        
+        
+        <!--#region decription-->
+        
+        <Grid Grid.Column="2">
+
+
+        </Grid>
+
+        <!--#endregion-->
+        
 
     </Grid>
 </Window>
