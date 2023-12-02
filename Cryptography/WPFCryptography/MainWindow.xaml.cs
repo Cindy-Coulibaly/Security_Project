@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WPFCryptography
 {
     /// <summary>
@@ -20,9 +21,16 @@ namespace WPFCryptography
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
+            Substitution substitution = new Substitution();
             InitializeComponent();
+        }
+
+        private void EncryptButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

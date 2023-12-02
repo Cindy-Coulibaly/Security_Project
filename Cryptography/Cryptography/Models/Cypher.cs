@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cryptography.Models
 {
-    internal class Cypher : ICryptography
+    public class Cypher : ICryptography
     {
         private int _key;
         private const int MINKEY = 0;

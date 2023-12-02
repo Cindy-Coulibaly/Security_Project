@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cryptography.Models
 {
-    internal class Substitution : ICryptography
+    public class Substitution : ICryptography
     {
         private Dictionary<char, char> key = new Dictionary<char, char>();
 
