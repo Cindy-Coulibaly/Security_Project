@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace WPFCryptography
 {
     /// <summary>
@@ -24,7 +25,7 @@ namespace WPFCryptography
         
         public MainWindow()
         {
-            Substitution substitution = new Substitution();
+            
             InitializeComponent();
         }
 
