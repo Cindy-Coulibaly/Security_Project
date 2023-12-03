@@ -41,7 +41,7 @@
             
             <TextBlock Grid.Row="0" Padding="10">Please input a text that you'll like to encrypt</TextBlock>
 
-            <TextBox Grid.Row="1" Height="300" BorderBrush="Black" BorderThickness="4"></TextBox>
+            <TextBox x:Name="plainText" Grid.Row="1" Height="300" BorderBrush="Black" BorderThickness="4"></TextBox>
             
         </Grid>
         
@@ -59,6 +59,9 @@
             
             <Button x:Name="EncryptButton" Grid.Row="1" Click="EncryptButton_Click" Width="100" Height="20">Encrypt</Button>
 
+            <ComboBox Name="EncryptionChoices" Grid.Row="0" Width="100" Height="20">
+            </ComboBox>
+
         </Grid>
 
         <!--#endregion-->
@@ -74,7 +77,7 @@
 
             <TextBlock Grid.Row="0" Padding="10">This is your encrypted message</TextBlock>
 
-            <TextBox Grid.Row="1" Height="300" BorderThickness="4" BorderBrush="Black"></TextBox>
+            <TextBox Name="encryptedText" Grid.Row="1" Height="300" BorderThickness="4" BorderBrush="Black"></TextBox>
 
 
         </Grid>
