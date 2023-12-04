@@ -28,6 +28,7 @@ namespace WPFCryptography
         {
             int selected = EncryptionChoices.SelectedIndex;
             string encryptedMessage;
+            GenerateNewKey.IsEnabled = true;
 
             // get the selected cryptography
             // then encrypt the message
@@ -45,12 +46,41 @@ namespace WPFCryptography
             }
             else
             {
-                encryptedMessage = "please input a plaintext";
+                encryptedMessage = "please input a plaintext to encrypt";
             }
 
             
             // then show the encrypted message
             encryptedText.Text = encryptedMessage;
+        }
+
+        private void GenerateNewKey_Click(object sender, RoutedEventArgs e)
+        {
+            int selected = EncryptionChoices.SelectedIndex;
+            string encryptedMessage;
+
+            if (selected == 0)
+            {
+                 cypher.GenerateKey();
+                encryptedMessage = cypher.Encrypt(plainText.Text);
+            }
+            else if (selected == 1)
+            {
+                substitution.GenerateKey();
+                encryptedMessage = substitution.Encrypt(plainText.Text);
+            }
+            else if (selected == 2)
+            {
+                rsa.GenerateKey();
+                encryptedMessage = rsa.Encrypt(plainText.Text);
+            }
+            else
+            {
+                encryptedMessage = "please input a plaintext to encrypt";
+            }
+            // then show the encrypted message
+            encryptedText.Text = encryptedMessage;
+
         }
     }
 }
