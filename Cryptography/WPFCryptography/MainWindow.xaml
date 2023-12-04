@@ -86,18 +86,22 @@
                         Click="EncryptButton_Click" Width="150" Height="30" 
                         Foreground="White" Background="#0bc6ab" BorderThickness="2" BorderBrush="#726eff"
                         FontSize="13" FontWeight="Bold">
-                    
+
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
-                    
+
                     Encrypt
                 </Button>
 
-                <ComboBox Name="EncryptionChoices" Grid.Row="1" Width="100" Height="20"/>
-
+                <Border Grid.Row="1" Margin="55,4.5" Background="#0bc6ab">
+                   <ComboBox Background="#726eff" Foreground="White" Name="EncryptionChoices"  Width="150" Height="30" 
+                          Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}"></ComboBox>
+ 
+                </Border>
+                
                 <Button x:Name="GenerateNewKey" Grid.Row="2" 
                         Click="GenerateNewKey_Click" Width="150" Height="30"
                         Foreground="White" Background="#0bc6ab" BorderThickness="2" BorderBrush="#726eff"
