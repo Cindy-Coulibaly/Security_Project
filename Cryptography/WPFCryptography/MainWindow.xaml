@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#212b38">
+        
         <!--#region Grid demarcartion-->
         
         <Grid.ColumnDefinitions>
@@ -25,10 +26,21 @@
         <!--#region Title-->
         
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-            <Border CornerRadius="10" BorderThickness="10" BorderBrush="#37465B">
-                <TextBlock FontFamily="Verdana" HorizontalAlignment="Center" Foreground="#726eff" FontSize="35"> Cryptography Program</TextBlock>
+            <Border CornerRadius="25" Height="60" Background="#37465B">
+                <TextBlock VerticalAlignment="Center" FontFamily="Braciola MS" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#726eff" FontSize="35"> Cryptography Program</TextBlock>
             </Border>
-           
+
+            <StackPanel Margin="50,0,0,0" HorizontalAlignment="Left">
+                <Grid>
+                    <Ellipse Width="65" Height="65" Fill="#5affe7" Grid.Row="1"/>
+                    <Ellipse Width="65" Height="65" Grid.Row="1">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="Images/Icon.png"  Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                </Grid>
+            </StackPanel>
+
         </Grid>
         
         <!--#endregion-->
@@ -41,10 +53,13 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            
-            <TextBlock Grid.Row="0" Padding="10">Please input a text that you'll like to encrypt</TextBlock>
 
-            <TextBox Background="#37465B" x:Name="plainText" Grid.Row="1" Height="300" BorderBrush="Black" BorderThickness="4"></TextBox>
+            <TextBlock Grid.Row="0" Padding="10" FontFamily="Braciola MS" Foreground="White">Please input a text that you'll like to encrypt</TextBlock>
+
+            <Border Grid.Row="1" CornerRadius="8,8,3,3" BorderThickness="3" BorderBrush="#0bc6ab">
+                <TextBox Background="#37465B" x:Name="plainText"  Height="300" Foreground="White"></TextBox>
+            </Border>
+            
             
         </Grid>
         
@@ -82,7 +97,6 @@
 
         <!--#endregion-->
         
-        
         <!--#region Decrytion part-->
 
         <Grid Grid.Column="2" Grid.Row="1">
@@ -91,10 +105,11 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Padding="10">This is your encrypted message</TextBlock>
+            <TextBlock Grid.Row="0" Padding="10" FontFamily="Braciola MS" Foreground="White" HorizontalAlignment="Center">This is your encrypted message</TextBlock>
 
-            <TextBox Background="#37465B" Name="encryptedText" Grid.Row="1" Height="300" BorderThickness="4" BorderBrush="Black"></TextBox>
-
+            <Border Grid.Row="1" CornerRadius="8,8,3,3" BorderThickness="3" BorderBrush="#0bc6ab" >
+                <TextBox Background="#37465B" Name="encryptedText"  Height="300" Foreground="White" ></TextBox>
+            </Border>
 
         </Grid>
 
