@@ -82,11 +82,34 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button x:Name="EncryptButton" Grid.Row="0" Click="EncryptButton_Click" Width="100" Height="20">Encrypt</Button>
+                <Button x:Name="EncryptButton" Grid.Row="0" 
+                        Click="EncryptButton_Click" Width="150" Height="30" 
+                        Foreground="White" Background="#0bc6ab" BorderThickness="2" BorderBrush="#726eff"
+                        FontSize="13" FontWeight="Bold">
+                    
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    
+                    Encrypt
+                </Button>
 
                 <ComboBox Name="EncryptionChoices" Grid.Row="1" Width="100" Height="20"/>
 
-                <Button x:Name="GenerateNewKey" Grid.Row="2" Click="GenerateNewKey_Click" Width="100" Height="20" IsEnabled="False">Generate new Key</Button>
+                <Button x:Name="GenerateNewKey" Grid.Row="2" 
+                        Click="GenerateNewKey_Click" Width="150" Height="30"
+                        Foreground="White" Background="#0bc6ab" BorderThickness="2" BorderBrush="#726eff"
+                         FontWeight="Bold">
+                    
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    Generate new Key
+                </Button>
 
 
             </Grid>
