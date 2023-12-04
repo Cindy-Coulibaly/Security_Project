@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFCryptography"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#212b38">
         <!--#region Grid demarcartion-->
         
         <Grid.ColumnDefinitions>
@@ -25,7 +25,10 @@
         <!--#region Title-->
         
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
-            <TextBlock HorizontalAlignment="Center" FontSize="35"> Cryptography Program</TextBlock>
+            <Border CornerRadius="10" BorderThickness="10" BorderBrush="#37465B">
+                <TextBlock FontFamily="Verdana" HorizontalAlignment="Center" Foreground="#726eff" FontSize="35"> Cryptography Program</TextBlock>
+            </Border>
+           
         </Grid>
         
         <!--#endregion-->
@@ -41,7 +44,7 @@
             
             <TextBlock Grid.Row="0" Padding="10">Please input a text that you'll like to encrypt</TextBlock>
 
-            <TextBox x:Name="plainText" Grid.Row="1" Height="300" BorderBrush="Black" BorderThickness="4"></TextBox>
+            <TextBox Background="#37465B" x:Name="plainText" Grid.Row="1" Height="300" BorderBrush="Black" BorderThickness="4"></TextBox>
             
         </Grid>
         
@@ -90,7 +93,7 @@
 
             <TextBlock Grid.Row="0" Padding="10">This is your encrypted message</TextBlock>
 
-            <TextBox Name="encryptedText" Grid.Row="1" Height="300" BorderThickness="4" BorderBrush="Black"></TextBox>
+            <TextBox Background="#37465B" Name="encryptedText" Grid.Row="1" Height="300" BorderThickness="4" BorderBrush="Black"></TextBox>
 
 
         </Grid>
