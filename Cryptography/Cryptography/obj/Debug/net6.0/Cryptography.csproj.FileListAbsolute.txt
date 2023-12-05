@@ -26,3 +26,17 @@ C:\Users\14384\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6
 C:\Users\14384\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.pdb
 C:\Users\14384\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.genruntimeconfig.cache
 C:\Users\14384\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\ref\Cryptography.dll
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.exe
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.deps.json
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.runtimeconfig.json
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.dll
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\bin\Debug\net6.0\Cryptography.pdb
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.AssemblyInfoInputs.cache
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.AssemblyInfo.cs
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.csproj.CoreCompileInputs.cache
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.dll
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\refint\Cryptography.dll
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.pdb
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\Cryptography.genruntimeconfig.cache
+C:\Users\2126537\Desktop\Security_Project\Cryptography\Cryptography\obj\Debug\net6.0\ref\Cryptography.dll
