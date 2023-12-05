@@ -1,36 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\github\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {}
+    "C:\\Users\\2126537\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {}
   },
   "projects": {
-    "E:\\github\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {
+    "C:\\Users\\2126537\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\github\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
+        "projectUniqueName": "C:\\Users\\2126537\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
         "projectName": "Cryptography",
-        "projectPath": "E:\\github\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
-        "packagesPath": "C:\\Users\\Makena\\.nuget\\packages\\",
-        "outputPath": "E:\\github\\Security_Project\\Cryptography\\Cryptography\\obj\\",
-    "C:\\Users\\14384\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\14384\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\14384\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
-        "projectName": "Cryptography",
-        "projectPath": "C:\\Users\\14384\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
-        "packagesPath": "C:\\Users\\14384\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\14384\\Desktop\\Security_Project\\Cryptography\\Cryptography\\obj\\",
-
+        "projectPath": "C:\\Users\\2126537\\Desktop\\Security_Project\\Cryptography\\Cryptography\\Cryptography.csproj",
+        "packagesPath": "C:\\Users\\2126537\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2126537\\Desktop\\Security_Project\\Cryptography\\Cryptography\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Makena\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\14384\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2126537\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,8 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
-
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

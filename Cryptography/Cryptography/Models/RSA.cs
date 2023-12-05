@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 
 namespace Cryptography.Models
 {
-    internal class RSA : ICryptography
+    public class RSA : ICryptography
     {
         private RSACryptoServiceProvider provider;
 
